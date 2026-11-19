@@ -1,0 +1,135 @@
+{
+  "dataset": "UCI Optical Recognition of Handwritten Digits",
+  "dataset_doi": "10.24432/C50P49",
+  "train_samples": 3823,
+  "test_samples": 1797,
+  "features": 64,
+  "classes": 10,
+  "seed": 3024,
+  "n_components": 9,
+  "classifier": "Euclidean 5-nearest neighbors",
+  "noise_test": "10% of normalized test pixel features replaced by random black or white values",
+  "validation_split": "stratified 80/20 from official training split",
+  "validation_parameter_search": [
+    {
+      "lambda1": 0.001,
+      "lambda2": 1e-05,
+      "lambda3": 1e-05,
+      "validation_accuracy": 0.9488859764089121,
+      "iterations": 200,
+      "nonzero_features": 58,
+      "seconds": 0.561
+    },
+    {
+      "lambda1": 0.01,
+      "lambda2": 1e-05,
+      "lambda3": 1e-05,
+      "validation_accuracy": 0.9672346002621232,
+      "iterations": 200,
+      "nonzero_features": 35,
+      "seconds": 0.553
+    },
+    {
+      "lambda1": 0.01,
+      "lambda2": 0.0001,
+      "lambda3": 0.0001,
+      "validation_accuracy": 0.9672346002621232,
+      "iterations": 200,
+      "nonzero_features": 35,
+      "seconds": 0.553
+    },
+    {
+      "lambda1": 0.01,
+      "lambda2": 0.001,
+      "lambda3": 0.001,
+      "validation_accuracy": 0.9685452162516383,
+      "iterations": 200,
+      "nonzero_features": 35,
+      "seconds": 0.553
+    }
+  ],
+  "selected_rsl_parameters": {
+    "lambda1": 0.01,
+    "lambda2": 0.001,
+    "lambda3": 0.001
+  },
+  "rsl_final_fit_iterations": 200,
+  "rsl_converged": false,
+  "rsl_final_primal_residual1_inf": 0.0001236201058056885,
+  "rsl_final_primal_residual2_inf": 0.0,
+  "rsl_nonzero_features": 43,
+  "results": [
+    {
+      "method": "Raw pixels + 5-NN",
+      "condition": "Clean test",
+      "dimensions": 64,
+      "accuracy": 0.9649415692821369,
+      "macro_precision": 0.9656761766153643,
+      "macro_recall": 0.9647117625710313,
+      "macro_f1": 0.9648643428149446
+    },
+    {
+      "method": "Raw pixels + 5-NN",
+      "condition": "10% salt-and-pepper test",
+      "dimensions": 64,
+      "accuracy": 0.5114079020589872,
+      "macro_precision": 0.6396950706402176,
+      "macro_recall": 0.5114925483948244,
+      "macro_f1": 0.534625612410691
+    },
+    {
+      "method": "PCA + 5-NN",
+      "condition": "Clean test",
+      "dimensions": 9,
+      "accuracy": 0.9193099610461881,
+      "macro_precision": 0.9203939874991484,
+      "macro_recall": 0.9188972969555435,
+      "macro_f1": 0.9185709144719943
+    },
+    {
+      "method": "PCA + 5-NN",
+      "condition": "10% salt-and-pepper test",
+      "dimensions": 9,
+      "accuracy": 0.48080133555926546,
+      "macro_precision": 0.5955456908011567,
+      "macro_recall": 0.4806677313678889,
+      "macro_f1": 0.502043315359742
+    },
+    {
+      "method": "Fisher LDA + 5-NN",
+      "condition": "Clean test",
+      "dimensions": 9,
+      "accuracy": 0.9593767390094602,
+      "macro_precision": 0.960843519278721,
+      "macro_recall": 0.9590277082710573,
+      "macro_f1": 0.9592683155363118
+    },
+    {
+      "method": "Fisher LDA + 5-NN",
+      "condition": "10% salt-and-pepper test",
+      "dimensions": 9,
+      "accuracy": 0.6182526432943796,
+      "macro_precision": 0.6457020539773364,
+      "macro_recall": 0.6179658481663474,
+      "macro_f1": 0.623719299929377
+    },
+    {
+      "method": "RSLDA+ + 5-NN",
+      "condition": "Clean test",
+      "dimensions": 9,
+      "accuracy": 0.9398998330550918,
+      "macro_precision": 0.9419613333162999,
+      "macro_recall": 0.9395568050964627,
+      "macro_f1": 0.9396818898664833
+    },
+    {
+      "method": "RSLDA+ + 5-NN",
+      "condition": "10% salt-and-pepper test",
+      "dimensions": 9,
+      "accuracy": 0.8024485253199778,
+      "macro_precision": 0.810250954578402,
+      "macro_recall": 0.8019422665992888,
+      "macro_f1": 0.8007288940289253
+    }
+  ]
+}
