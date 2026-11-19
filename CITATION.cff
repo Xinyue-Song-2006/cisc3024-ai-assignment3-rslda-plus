@@ -1,0 +1,4 @@
+cff-version: 1.2.0
+message: "If you use this educational reimplementation, cite the RSLDA+ paper and the UCI dataset as described in README.md."
+title: "AI Reimplementation of RSLDA+ for Handwritten Digit Recognition"
+type: software
